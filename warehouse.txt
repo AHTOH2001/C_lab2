@@ -1,0 +1,2 @@
+Name of product: mandarin  Amount of mandarin:  0.000000   Price for one mandarin:  1.1400
+Name of product: grape  Amount of grape:  0.000000   Price for one grape:  1.2800
