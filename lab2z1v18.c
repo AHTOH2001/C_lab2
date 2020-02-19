@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <math.h>
 #include <conio.h>
+
 #define true 1
 #define false 0
 #define err -2000123000
@@ -167,4 +168,3 @@ void problem1() {
     }
     printf("Do novyh vstrech");
 }
-
