@@ -6,7 +6,7 @@
             "type": "shell",
             "command": "gcc",
             "args":[
-                "-g", "-O0", "pozor.c"
+                "-g", "-O0", "lab2z1v18.c" ,"lab2z2v18.c" , "MainFile.c"  
             ],
             "group": {
                 "kind": "build",

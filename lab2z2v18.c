@@ -35,7 +35,7 @@ double stod(char s[100])
     if (o==true) return -1*sm/d;
     else return sm/d;
 }
-int main ()
+void problem2 ()
 {
     printf ("vvedite x and eps\n");
     double x,eps,sum = 0,fc = 1;
@@ -46,17 +46,17 @@ int main ()
     if (x==err || eps==err)
     {
         printf ("error");
-        return 0;
+        return;
     }
     if (eps<=0)
     {
         printf ("err: epsilon should be more than 0");            
-        return 0;
+        return;
     }
     if (myabs(x)>=1000)
     {
         printf ("err: x too big");
-        return 0;
+        return;
     }
     printf ("right sin is %lf\n",sin(x));
     while (x>PI+0.1) x-=2*PI;
@@ -81,5 +81,4 @@ int main ()
     printf (" actual epsilon is  %lf\n",myabs(sin(x)-sum));
     printf ("should be less than %lf\n",eps);
     printf ("n = %d",i/2+1);
-    return 0;
 }
