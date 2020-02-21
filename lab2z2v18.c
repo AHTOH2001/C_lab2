@@ -16,7 +16,7 @@ double myabs(double x)
         return x;
 }
 
-double stod(char s[100])
+double stod(char s[1000])
 {
     int i = 0, o = false, f = false;
     double sm = 0, d = 1;

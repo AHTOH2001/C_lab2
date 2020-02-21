@@ -11,7 +11,7 @@ typedef struct
     double inet, vlc, oth, sms, mms, abr;
 } user;
 
-double stod1(char s[100])
+double stod1(char s[1000])
 {
     int i = 0, o = false;
     double sm = 0;
@@ -51,7 +51,7 @@ void problem1()
     int n, m, i, j;
     fscanf(fp, "%d%d", &n, &m);
     double a[20][12], b[20];
-    char name[20][100];
+    char name[20][1000];
     user u;
     for (i = 0; i < n; i++)
     {
@@ -61,7 +61,7 @@ void problem1()
     }
     fclose(fp);
     int o, f = false;
-    char s[100];
+    char s[1000];
     while (true)
     {
         printf("1. Enter data about user\n");
@@ -204,7 +204,7 @@ void problem1()
         {
             printf("tariffs: https://www.a1.by/ru/plans/c/b2ctariffs\n");
             printf("150 - number of contact center(for free in Belarus)\n");
-            printf("7100 (0.03 ruble)\n");
+            printf("71000 (0.03 ruble)\n");
             printf("+375 29 6 000 150 (cost depends on roaming)\n");
             printf("email address 150@A1.by\n");
             printf("more contact information: https://www.a1.by/ru/company/mobile-services-contacts\n");
