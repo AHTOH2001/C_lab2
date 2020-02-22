@@ -23,6 +23,6 @@ int main()
         else
             printf("Error, try again\n");
     }
-
+    getch();
     return 0;
 }

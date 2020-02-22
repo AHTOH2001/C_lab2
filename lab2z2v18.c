@@ -61,9 +61,9 @@ void problem2()
         printf("error");
         return;
     }
-    if (eps <= 0)
+    if (eps <= 0 || eps>=1)
     {
-        printf("err: epsilon should be more than 0");
+        printf("err: epsilon should be more than 0 and less than 1");
         return;
     }
     if (myabs(x) >= 1000)
