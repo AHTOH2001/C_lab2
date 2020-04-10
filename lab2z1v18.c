@@ -69,8 +69,7 @@ void problem1()
         printf("3. Information about tariffs\n");
         printf("4. Contact information of velcom company\n");
         printf("5. Exit from the program\n");
-        //scanf("%s", s);
-        //o = stod1(s);
+        
         o = getch();
         if (o == '1')
         {
