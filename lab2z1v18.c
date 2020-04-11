@@ -5,7 +5,7 @@
 #define true 1
 #define false 0
 #define err -2000123000
-#define max 9223372036854775807
+#define max 2147483646
 typedef struct
 {
     double inet, vlc, oth, sms, mms, abr;
@@ -41,6 +41,11 @@ double stod1(char s[1000])
 void problem1()
 {
     FILE *fp = fopen("tarif.txt", "r");
+    int n, m, i, j,o,f;
+    char s[1000];
+    user u;
+    double a[20][12], b[20];
+    char name[20][1000];
     if (fp != NULL)
         printf("Succesfully loaded tariffs\n");
     else
@@ -48,11 +53,7 @@ void problem1()
         printf("error while loading tariffs\n");
         return;
     }
-    int n, m, i, j;
     fscanf(fp, "%d%d", &n, &m);
-    double a[20][12], b[20];
-    char name[20][1000];
-    user u;
     for (i = 0; i < n; i++)
     {
         for (j = 0; j < m; j++)
@@ -60,8 +61,7 @@ void problem1()
         fscanf(fp, "%s", name[i]);
     }
     fclose(fp);
-    int o, f = false;
-    char s[1000];
+    f = false;
     while (true)
     {
         printf("1. Enter data about user\n");
@@ -131,6 +131,7 @@ void problem1()
                 printf("There is no data about user\n");
             else
             {
+                int pz[20];
                 for (i = 0; i < n; i++)
                 {
                     b[i] = a[i][6];
@@ -145,8 +146,7 @@ void problem1()
                     if (a[i][3] != -1 && u.oth > a[i][3])
                         b[i] += (u.oth - a[i][3]) * a[i][8];
                     b[i] += u.abr * a[i][11];
-                }
-                int pz[20];
+                }                
                 for (i = 0; i < n; i++)
                     pz[i] = i;
                 for (i = 0; i < n; i++)

@@ -5,7 +5,7 @@
 #define true 1
 #define false 0
 #define err -2000123000
-#define max 9223372036854775807
+#define max 2147483646
 #define PI 3.14159265358979323846
 
 double myabs(double x)
@@ -50,10 +50,11 @@ double stod(char s[1000])
 
 void problem2()
 {
-    printf("vvedite x and eps\n");
-    double x, eps, sum = 0, fc = 1;
+    double x, eps, sum = 0, fc = 1, z, xx;
+    int i;
     char s1[1000] = {'\0'}, s2[1000] = {'\0'};
-    scanf("%s %s", &s1, &s2);
+    printf("vvedite x and eps\n");
+    scanf("%s %s", s1, s2);
     x = stod(s1);
     eps = stod(s2);
     if (x == err || eps == err)
@@ -61,7 +62,7 @@ void problem2()
         printf("error");
         return;
     }
-    if (eps <= 0 || eps>=1)
+    if (eps <= 0 || eps >= 1)
     {
         printf("err: epsilon should be more than 0 and less than 1");
         return;
@@ -76,8 +77,8 @@ void problem2()
         x -= 2 * PI;
     while (x < PI - 0.1)
         x += 2 * PI;
-    double z = x, xx = x;
-    int i = 1;
+    z = x, xx = x;
+    i = 1;
     while (myabs(z) >= eps)
     {
         if ((i / 2) % 2 == 0)
